@@ -85,7 +85,7 @@ app.post("/login", async (req, res) => {
 
       const dist = euclidean(user.descriptor, descriptor);
 
-      if (dist < 0.7) {
+      if (dist < 0.5) {
         return res.json({ msg: "✅ Login Success: " + user.name });
       }
     }
